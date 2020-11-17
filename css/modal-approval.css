@@ -1,0 +1,126 @@
+.fancybox-container.fancybox-is-modal.fancybox-is-open {
+    height: 100%;
+    width: 100%;
+}
+.modal-title{
+    max-width: 650px;
+    font-family: "Raleway-Bold";
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    color: #0050A0;
+    margin: 0px 0 30px 0;
+}
+.modal-text{
+	font-family: "Raleway-Regular";
+    font-size: 16px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    color: #312E2A;
+    max-width: 487px;
+}
+.modal-form form {
+  width: 100%;
+}
+.modal-form form input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  line-height: 2;
+  border-radius: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-family: "Raleway-Light";
+  font-size: 16px;
+  letter-spacing: 0.89px;
+  color: #506479;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #E5E5E5;
+  width: 100%;
+  padding: 5px 0;
+  margin: 1em 30px 1em 0;
+  outline: none;
+}
+.modal-form form input[type="text"]::-webkit-input-placeholder {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  font-family: "Raleway-Light";
+  font-size: 16px;
+  letter-spacing: 0.89px;
+  color: #506479;
+  background: transparent;
+}
+.modal-form form input[type="text"]:-ms-input-placeholder {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  font-family: "Raleway-Light";
+  font-size: 16px;
+  letter-spacing: 0.89px;
+  color: #506479;
+  background: transparent;
+}
+.modal-form form input[type="text"]::-ms-input-placeholder {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  font-family: "Raleway-Light";
+  font-size: 16px;
+  letter-spacing: 0.89px;
+  color: #506479;
+  background: transparent;
+}
+.modal-form form input[type="text"]::placeholder {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  font-family: "Raleway-Light";
+  font-size: 16px;
+  letter-spacing: 0.89px;
+  color: #506479;
+  background: transparent;
+}
+.modal-form form input[type="checkbox"] {
+  border-radius: 0;
+  min-width: 1rem;
+  height: 1rem;
+  box-sizing: border-box;
+  margin: 0 0.5rem 0 0;
+}
+.modal-form form button {
+  margin: 2em 2em 2em 0;
+  width: 145px;
+}
+.modal-form form button.disabled {
+  opacity: 0.7;
+  border-color: #ccc;
+  color: #bbb;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+  background-color: #00000005;
+}
+
+@media (max-width: 640px) {
+  .modal-form {
+    padding: 40px 0 0;
+  }
+  .modal-form form {
+    margin: auto;
+  }
+  .modal-form form input[type="text"] {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .modal-form form button {
+    margin: 2em auto;
+  }
+}

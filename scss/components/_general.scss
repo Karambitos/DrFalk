@@ -1,0 +1,81 @@
+.media,
+.stream,
+.survey {
+    padding: 48px 0 60px;
+
+    .media-box {
+        margin: 60px 0 0;
+    }
+
+    &-main-title {
+        max-width: 650px;
+        padding-left: 90px;
+
+        @include respond-to('large') {
+            max-width: 100%;
+            padding: 0 40px 0 20px;
+        }
+
+        @include respond-to('small') {
+            padding: 0 20px 0 0;
+        }
+    }
+
+    &-main-title--text {
+        max-width: 100%;
+        margin-bottom: 22px;
+
+        .text-conteiner {
+            display: flex;
+            flex-wrap: wrap;
+
+            p {
+                max-width: 530px;
+                font-size: 18px;
+                line-height: 30px;
+                letter-spacing: -0.015em;
+                margin-right: auto;
+            }
+        }
+    }
+
+    &-title {
+        font-family: "Raleway-Bold";
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+        color: $nav;
+        margin: 0;
+    }
+
+    &-subtitle {
+        max-width: 650px;
+        font-family: "Raleway-Bold";
+        font-size: 60px;
+        line-height: 75px;
+        letter-spacing: -0.015em;
+        color: $primary;
+        margin: 30px 0 15px 0;
+
+
+        @include respond-to('tiny') {
+            font-size: 40px;
+            line-height: 45px;
+        }
+    }
+
+    &-text {
+        font-family: "Raleway-Regular";
+        font-size: 16px;
+        line-height: 35px;
+        letter-spacing: -0.015em;
+
+        color: $text;
+
+        max-width: 487px;
+
+        @include respond-to('large') {
+            max-width: 100%;
+        }
+    }
+}

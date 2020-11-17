@@ -1,0 +1,328 @@
+    .video-popup {
+      @include animate (all);
+
+      pointer-events: none;
+      opacity: 0;
+
+      position: fixed;
+      z-index: 999;
+      top: 190px;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+
+      @include respond-to('medium') {
+        top: 77px;
+      }
+
+      &--wrapper {
+        max-width: 1140px;
+        width: 100%;
+        margin: auto;
+        background-color: $white;
+        position: relative;
+      }
+
+      .video-box {
+        @include animate (all);
+        position: relative;
+        z-index: 1;
+
+
+        .video__wrapper {
+          position: relative;
+
+          iframe {
+            width: 100%;
+            height: 650px;
+            border: none;
+          }
+
+          // .playvideo {
+          //   @include animate (all);
+          //   position: absolute;
+          //   top: 50%;
+          //   left: 50%;
+          //   transform: translate(-50%, -50%);
+
+          //   opacity: 1;
+          //   width: 94px;
+          //   height: 94px;
+          //   display: block;
+          //   background-color: rgba(243, 145, 0, 0.5);
+          //   border-radius: 50%;
+          //   background-image: url(../img/play-button.svg);
+          //   background-position: center;
+          //   background-repeat: no-repeat;
+          // }
+
+          // .playvideo.active {
+          //   @include animate (all);
+          //   opacity: 0;
+          // }
+        }
+
+        .video__lining {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          min-height: 350px;
+          overflow: hidden;
+          max-height: 450px;
+
+
+          &:hover {
+            @include animate (all);
+
+            .video__heading-icon {
+              @include animate (all);
+              transform: translate(-50%, -50%) scale(1.1);
+            }
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            opacity: 0.65;
+            background: $black;
+          }
+        }
+
+        .video__image {
+          width: 100%;
+          position: static;
+          max-width: unset;
+          height: auto;
+
+          @include respond-to('tablet') {
+            object-fit: cover;
+            height: 100%;
+            object-position: 50% 50%;
+          }
+
+          &_ie {
+            position: relative;
+            z-index: 0;
+            display: none;
+          }
+        }
+
+        .video__heading-icon {
+          @include animate (all);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          width: 94px;
+          height: 94px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(243, 145, 0, 0.5);
+          border-radius: 50%;
+        }
+      }
+
+      &--title {
+        margin: 90px 95px 45px;
+
+        h2 {
+          font-family: "Raleway-Bold";
+          font-size: 60px;
+          line-height: 75px;
+          letter-spacing: -0.015em;
+          color: $primary;
+          margin-bottom: 14px;
+          max-width: 653px;
+
+          @include respond-to('small') {
+            font-size: 35px;
+            line-height: 45px;
+          }
+
+          span {
+            color: red;
+            display: inline-block;
+          }
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 35px;
+          letter-spacing: -0.015em;
+          color: $text;
+
+          max-width: 45%;
+
+          @include respond-to('medium') {
+            max-width: 100%;
+          }
+        }
+
+        .video-popup-title-wrapper {
+          display: flex;
+          justify-content: space-between;
+
+          @include respond-to('medium') {
+            flex-wrap: wrap;
+          }
+        }
+
+      }
+
+      &--speakers {
+        margin: 45px 95px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .video-popup--speaker {
+          display: flex;
+          align-items: center;
+          width: 40%;
+
+          @include respond-to('large') {
+            flex-wrap: wrap;
+            width: 100%;
+          }
+
+          @include respond-to('medium') {
+            width: 100%;
+          }
+
+          @include respond-to('tiny') {
+            margin-bottom: 40px;
+
+          }
+
+          &-info {
+            @include respond-to('tiny') {
+              width: 100%;
+            }
+
+            h3 {
+              font-family: "Raleway-Bold";
+              font-size: 24px;
+              line-height: 36px;
+              letter-spacing: -0.015em;
+              color: $primary;
+            }
+
+            p {
+              font-size: 14px;
+              line-height: 30px;
+              letter-spacing: -0.015em;
+            }
+          }
+        }
+
+        .video-popup--speaker-foto {
+          min-width: 90px;
+          height: 90px;
+
+          margin-right: 35px;
+
+          @include respond-to('tiny') {
+            margin: auto;
+            width: 140px;
+            height: 140px;
+
+          }
+        }
+      }
+
+      &--download {
+        padding: 50px 95px 35px 125px;
+        margin-left: 95px;
+        background-color: $timer;
+        color: $white;
+
+        @include respond-to('large') {
+          margin-left: 0;
+        }
+
+        @include respond-to('medium') {
+          padding: 35px 35px 35px 28px;
+        }
+
+        h3 {
+          font-family: "Raleway-Bold";
+          font-size: 24px;
+          line-height: 36px;
+          margin-bottom: 40px;
+        }
+
+        .download-list {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+
+          @include respond-to('medium') {
+            justify-content: center;
+          }
+
+
+          .download-item {
+            margin-bottom: 45px;
+
+            @include respond-to('medium') {
+              width: auto;
+            }
+
+            a {
+              align-items: center;
+              display: flex;
+
+              @include respond-to('medium') {
+                padding-right: 30px;
+              }
+
+              &:before {
+                content: '';
+                display: inline-block;
+                margin-right: 30px;
+
+                background: url(../../img/download.svg);
+                width: 40px;
+                height: 40px;
+              }
+            }
+          }
+
+          li,
+          a {
+            font-size: 14px;
+            line-height: 30px;
+            letter-spacing: -0.015em;
+
+            color: rgba(255, 255, 255, 0.8);
+          }
+        }
+      }
+
+      &--title,
+      &--speakers {
+        @include respond-to('small') {
+          margin: 45px 20px;
+        }
+      }
+
+    }
+
+    .video-popup.active {
+      @include animate (all);
+      pointer-events: all;
+      opacity: 1;
+      overflow: auto;
+    }

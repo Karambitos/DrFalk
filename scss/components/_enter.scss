@@ -1,0 +1,174 @@
+.enter-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+
+  @include respond-to('small') {
+    flex-direction: column;
+  }
+
+  .enter-branding {
+
+    &__image {
+      max-width: 90px;
+    }
+  }
+
+  .enter-form {
+    display: flex;
+    align-items: center;
+
+    @include respond-to('small') {
+      padding: 40px 0 0;
+    }
+
+    form {
+      height: 100%;
+      align-items: center;
+      text-align: center;
+      display: flex;
+
+      @include respond-to('small') {
+        flex-wrap: wrap;
+        margin: auto;
+      }
+
+      input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        line-height: 2;
+        border-radius: 0;
+
+        @include animate(all);
+        font-family: "Raleway-Light";
+        font-size: 16px;
+        letter-spacing: 0.89px;
+        color: $nav;
+
+        box-sizing: border-box;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #E5E5E5;
+
+        width: 145px;
+        padding: 5px 0;
+        margin-right: 30px;
+
+        outline: none;
+
+        @include respond-to('small') {
+          width: 100%;
+          margin: 20px 0;
+        }
+      }
+
+      input[type="password"] {
+        /* For safety - reset parent styles, that can break glyph codes*/
+        font-variant: normal;
+        text-transform: none;
+        letter-spacing: 5px;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        line-height: 2;
+        border-radius: 0;
+
+        font-family: "fontello";
+        font-size: 16px;
+      }
+
+      input::placeholder {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0;
+
+        font-family: "Raleway-Light";
+        font-size: 16px;
+        letter-spacing: 0.89px;
+        color: $nav;
+        background: transparent;
+      }
+
+      button {
+        cursor: pointer;
+        @include animate (all);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        padding: 0;
+        background-color: $btn;
+        border: 1px solid $btn;
+        position: relative;
+
+        pointer-events: auto;
+        outline: none;
+
+        @include respond-to('small') {
+          margin: auto;
+        }
+
+        &:before {
+          @include animate (all);
+          position: absolute;
+          content: '';
+
+          background-color: $white;
+          width: 9px;
+          height: 2px;
+          display: block;
+          border-radius: 6px;
+          top: 45%;
+          left: 52%;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &:after {
+          @include animate (all);
+          position: absolute;
+          content: '';
+
+          background-color: $white;
+          width: 9px;
+          height: 2px;
+          display: block;
+          border-radius: 6px;
+          top: 58%;
+          left: 52%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &.disabled {
+          @include animate (all);
+          pointer-events: none;
+          background-color: transparent;
+
+          &:before {
+            @include animate (all);
+            background-color: $nav;
+          }
+
+          &:after {
+            @include animate (all);
+            background-color: $nav;
+          }
+
+        }
+      }
+    }
+
+  }
+}
+
+
+.main-bg {
+  .picture {
+    .hero__image {
+      object-fit: cover;
+      object-position: left;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2020 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="password-star" unicode="&#x2022;" d="M1012 240h-899c-62 0-113 51-113 113s51 112 113 112h899c62 0 112-50 112-112 0-62-50-113-112-113z m-675-390c-62 0-113 51-113 113 0 20 6 39 15 56l450 779c34 53 103 68 155 35 50-31 66-95 39-146l-449-780c-20-35-57-57-97-57z m450 0c-40 0-77 21-97 56l-450 780c-29 54-7 123 48 151 51 28 116 10 146-39l450-778c31-54 13-123-41-154-17-11-37-16-56-16l0 0z" horiz-adv-x="1124" />
+</font>
+</defs>
+</svg>

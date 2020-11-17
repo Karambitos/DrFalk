@@ -1,0 +1,169 @@
+header {
+
+  .header-fixed-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 1001;
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 37px;
+      padding-bottom: 37px;
+
+      @include respond-to('medium') {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+
+    .header__navigation {
+      margin-left: auto;
+
+      @include respond-to('medium') {
+        @include animate(all);
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 0;
+        flex-wrap: wrap;
+        width: 0;
+        background-color: white;
+        height: 100%;
+        overflow: hidden;
+        z-index: 5;
+
+        &.active {
+          @include animate(all);
+          width: 50%;
+
+          @include respond-to('small') {
+            width: 75%;
+            overflow: auto;
+          }
+        }
+      }
+
+      .bar-branding {
+        display: none;
+
+        @include respond-to('medium') {
+          display: block;
+          position: absolute;
+          top: 30px;
+          left: 40px;
+        }
+
+        .branding__image {
+          max-width: 80px;
+        }
+      }
+
+      .navbar {
+        @include respond-to('medium') {
+          padding: 110px 20px;
+        }
+
+        .navbar__list {
+          display: flex;
+          align-items: center;
+
+          @include respond-to('medium') {
+            display: block;
+          }
+        }
+
+        li {
+          @include animate (all);
+          position: relative;
+          padding-bottom: 10px;
+          margin-right: 42px;
+
+          @include respond-to('large') {
+            margin-right: 20px;
+          }
+
+          @include respond-to('medium') {
+            margin-right: 0;
+            padding: 20px 15px 20px;
+
+          }
+
+          &.active {
+            &:before {
+              @include animate (all);
+              position: absolute;
+              content: '';
+              display: block;
+              width: 7px;
+              height: 7px;
+              background: $btn;
+              border-radius: 50%;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+
+              @include respond-to('medium') {
+                bottom: auto;
+                top: 50%;
+                left: 0;
+                transform: translateX(0);
+                transform: translateY(-50%);
+              }
+            }
+
+            a {
+              font-family: "Raleway-Bold";
+            }
+          }
+
+          a {
+            font-family: "Raleway-Regular";
+            font-size: 16px;
+            color: $nav;
+          }
+        }
+
+        li:last-child {
+          margin-right: 0;
+        }
+
+      }
+    }
+  }
+
+  .branding__image {
+    max-width: 90px;
+
+    @include respond-to('medium') {
+      max-width: 50px;
+    }
+  }
+}
+
+.overflow-menu {
+  @include animate(all);
+  z-index: -1;
+  opacity: 0;
+}
+
+
+.header__navigation.active+.overflow-menu {
+  @include animate(all);
+  background-color: $nav;
+  position: fixed;
+  opacity: 0.8;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}

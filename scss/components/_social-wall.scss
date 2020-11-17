@@ -1,0 +1,115 @@
+.media-cards.media-cards--social:before {
+  @include respond-to('tiny') {
+    content: none;
+  }
+}
+
+.media-cards--social {
+  max-width: 1140px;
+  z-index: 5;
+
+  .tabs {
+    width: 100%;
+    color: $white;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to('giant_xl') {
+      flex-direction: column;
+    }
+
+    >li {
+      transition-duration: .25s;
+      display: inline-block;
+      font-family: "Raleway-Bold";
+      font-size: 24px;
+      line-height: 30px;
+      padding: 15px 20px;
+      max-width: 360px;
+      width: 100%;
+      box-sizing: border-box;
+      height: 100%;
+      max-height: 64px;
+      margin-right: 10px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      background-color: $white;
+      color: $primary;
+      filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.1));
+
+      &.active {
+        background-color: $btn;
+        color: $white;
+        filter: none;
+      }
+    }
+
+    >li:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .tab__content {
+    z-index: 1;
+    background-color: $white;
+    position: relative;
+    margin-bottom: 90px;
+    width: 100%;
+    height: 100%;
+
+    >li {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: none;
+      list-style: none;
+
+      .content__wrapper {
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: 5px;
+        width: 100%;
+        padding: 45px 40px 40px 40px;
+        background-color: $white;
+
+        h2 {
+          font-family: "Raleway-Light";
+          color: $primary;
+          width: 100%;
+          text-align: left;
+          padding-bottom: 20px;
+        }
+      }
+
+      .content__wrapper--picture {
+        padding: 0;
+      }
+    }
+
+    .qr-box {
+      display: flex;
+
+      @include respond-to('small') {
+        flex-direction: column;
+      }
+
+      &--text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+      }
+
+      &--img {
+        img {
+          max-width: 40%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

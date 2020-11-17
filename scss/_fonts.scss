@@ -1,0 +1,52 @@
+/* font-family: "Raleway"; */
+@font-face {
+    font-family: "Raleway-Light";
+    src: url("../fonts/Raleway-Light.ttf");
+    font-weight: 300;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Raleway-Regular";
+    src: url("../fonts/Raleway-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Raleway-Medium";
+    src: url("../fonts/Raleway-Medium.ttf");
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Raleway-SemiBold";
+    src: url("../fonts/Raleway-SemiBold.ttf");
+    font-weight: 600;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Raleway-Bold";
+    src: url("../fonts/Raleway-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'fontello';
+    src: url('../fonts/fontello/fontello.eot?87570221');
+    src: url('../fonts/fontello/fontello.eot?87570221#iefix') format('embedded-opentype'),
+        url('../fonts/fontello/fontello.woff2?87570221') format('woff2'),
+        url('../fonts/fontello/fontello.woff?87570221') format('woff'),
+        url('../fonts/fontello/fontello.ttf?87570221') format('truetype'),
+        url('../fonts/fontello/fontello.svg?87570221#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

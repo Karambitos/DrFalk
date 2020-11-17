@@ -1,0 +1,29 @@
+footer {
+  background-color: $primary;
+  z-index: 1;
+
+  .footer-nav--list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    color: white;
+    padding: 15px 0;
+
+    a {
+      color: $white;
+    }
+
+    li {
+      @include respond-to('tiny') {
+        text-align: center;
+        width: 100%;
+        padding: 20px 0;
+      }
+    }
+
+    @include respond-to('tiny') {
+      flex-wrap: wrap;
+    }
+  }
+}

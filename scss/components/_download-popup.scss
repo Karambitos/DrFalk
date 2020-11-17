@@ -1,0 +1,118 @@
+.action-popup {
+  position: fixed;
+  opacity: 1;
+  z-index: 10;
+  display: none;
+
+
+
+  &--box {
+    box-sizing: border-box;
+    position: fixed;
+    max-width: 1142px;
+    max-height: 548px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white;
+
+
+    @include respond-to('huge') {
+      height: 65%;
+      top: 50%;
+    }
+
+    @include respond-to('giant') {
+      height: 70%;
+    }
+  }
+
+
+  .action-popup--wrapper,
+  .action-popup--download {
+    @include respond-to('huge') {
+      height: 100%;
+    }
+  }
+
+  &--wrapper {
+    position: relative;
+    // overflow: scroll;
+    width: 1142px;
+    height: 600px;
+    box-sizing: border-box;
+    // border-bottom: 40px solid $white;
+    background-color: $white;
+
+    @include respond-to('giant_xl') {
+      width: 100vw;
+    }
+
+    img {
+      // height: auto;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &--download {
+    position: absolute;
+    top: 60px;
+    right: -147px;
+    width: 1142px;
+    height: 635px;
+    display: block;
+    background-color: $timer;
+
+    @include respond-to('medium') {
+      top: 85px;
+      right: 0;
+      width: 100vw;
+    }
+
+    @include respond-to('huge') {
+      top: 85px;
+    }
+
+    .download-inner {
+      font-family: "Raleway-Bold";
+      font-size: 14px;
+      line-height: 30px;
+      display: flex;
+      position: absolute;
+      align-items: center;
+      bottom: 30px;
+      left: 302px;
+      color: $white;
+      border: 1px solid #FFFFFF;
+      box-sizing: border-box;
+      border-radius: 50px;
+      padding: 5px 26px;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        margin-right: 10px;
+        background-image: url(../../img/download-arrow.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+      }
+
+      @include respond-to('medium') {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+  }
+}
+
+.preview.open+.action-popup {
+  @include animate (all);
+  opacity: 1;
+  pointer-events: all;
+  display: block;
+}

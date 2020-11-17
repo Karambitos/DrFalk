@@ -1,0 +1,106 @@
+button,
+.button {
+    @include animate (all);
+    cursor: pointer;
+    font-family: "Raleway-Bold";
+
+    font-size: 14px;
+    line-height: 30px;
+
+    letter-spacing: -0.015em;
+
+    background-color: $white;
+    color: $nav;
+    padding: 0 32px;
+
+    border: 1px solid $btn;
+    box-sizing: border-box;
+    border-radius: 50px;
+
+
+    &:hover {
+        @include animate (all);
+        color: $white;
+        background-color: $btn;
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+
+
+.video-popup--close {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    width: 70px;
+    height: 70px;
+    background-color: $btn;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    top: 0;
+    right: 0;
+    z-index: 2;
+
+    @include respond-to('medium') {
+        width: 45px;
+        height: 45px;
+    }
+
+    &:before {
+        @include animate (all);
+        position: absolute;
+        content: '';
+        background-color: $white;
+
+        height: 3px;
+        width: 22px;
+        border-radius: 50px;
+        transform: rotate(135deg);
+    }
+
+    &:after {
+        @include animate (all);
+        position: absolute;
+        content: '';
+        background-color: $white;
+
+        height: 3px;
+        width: 22px;
+        border-radius: 50px;
+        transform: rotate(-135deg);
+    }
+
+    &:hover {
+
+        &:after {
+            @include animate (all);
+            transform: rotate(-135deg) scale(1.5);
+        }
+
+        &:before {
+            @include animate (all);
+            transform: rotate(135deg) scale(1.5);
+        }
+
+    }
+}
+
+.sdnicbsun-play:before {
+    content: "" !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 94px;
+    height: 94px;
+    display: block;
+    background-color: rgba(243, 145, 0, 0.5);
+    border-radius: 50%;
+    background-image: url(../img/play-button.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
