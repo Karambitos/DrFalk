@@ -3,11 +3,11 @@ $(document).ready(() => {
   // * TIMER setings
 
   // * start first stream
-  let endtime = "october 02 2020, 08:30 GMT+0200";
+  let endtime = "februare 02 2021, 08:30 GMT+0200";
   // * end first stream
-  let endtimeStream = "october 02 2020, 11:00 GMT+0200";
+  let endtimeStream = "februare 02 2021, 11:00 GMT+0200";
   // * start second stream
-  let endtime2 = "october 02 2020, 15:00 GMT+0200";
+  let endtime2 = "februare 02 2021, 15:00 GMT+0200";
 
   let nowdate = Date.now();
   let checkTime = function () {
@@ -34,7 +34,6 @@ $(document).ready(() => {
     var minutes = Math.floor((total / 1000 / 60) % 60);
     var hours = Math.floor((total / (1000 * 60 * 60)) % 24);
     var days = Math.floor(total / (1000 * 60 * 60 * 24));
-    // console.log(total);
 
     return {
       total: total,

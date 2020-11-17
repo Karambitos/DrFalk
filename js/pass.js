@@ -31,7 +31,7 @@ $(document).ready(() => {
     } else {
       event.preventDefault();
       window.location.href += "stream.html";
-      localStorage.setItem('key', 'true');
+      // localStorage.setItem('key', 'true');
       return
     }
   });

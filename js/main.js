@@ -1,17 +1,16 @@
 "use strict";
 $(document).ready(() => {
 
-  checkStorage();
+  // checkStorage();
 
-  function checkStorage() {
-    const value = localStorage.getItem('key');
-    if (value === null) {
-      localStorage.setItem('key', 'false');
-      window.location.replace('/');
-      return
-    }
-  }
-
+  // function checkStorage() {
+  //   const value = localStorage.getItem('key');
+  //   if (value === null) {
+  //     localStorage.setItem('key', 'false');
+  //     window.location.replace('/');
+  //     return
+  //   }
+  // }
   /*
     Spiner
   */
